@@ -11,8 +11,12 @@ namespace GradeBook.GradeBooks
 {
     public class BaseGradeBook
     {
+        
         public string Name { get; set; }
         public List<Student> Students { get; set; }
+
+        public GradeBookType Type { get; set; } // Module 2 answer, "List<>" is not needed, but can I still use it?
+
 
         public BaseGradeBook(string name)
         {
