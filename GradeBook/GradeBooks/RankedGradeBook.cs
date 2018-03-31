@@ -12,6 +12,32 @@ namespace GradeBook.GradeBooks
             Type = GradeBookType.Ranked;
         }
 
+        public override void CalculateStatistics()
+        {
+            int numberofStudents = 5;
+            if (Students.Count >= numberofStudents)
+            {
+                Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade");
+            }
+            else
+            {
+                base.CalculateStatistics();
+            }
+        }
+
+        public override void CalculateStudentStatistics(string name)
+        {
+            int numberofStudents = 5;
+            if (Students.Count >= numberofStudents)
+            {
+                Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade");
+            }
+            else
+            {
+                base.CalculateStudentStatistics(name);
+            }
+        }
+
         public override char GetLetterGrade (double averageGrade)
         {
             int minimumNumberofStudents = 5;
