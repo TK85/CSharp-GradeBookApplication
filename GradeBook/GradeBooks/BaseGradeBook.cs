@@ -17,11 +17,13 @@ namespace GradeBook.GradeBooks
 
         public GradeBookType Type { get; set; } // Module 2 answer, "List<>" is not needed, but can I still use it?
 
+        public bool IsWeighted { get; set; }
 
-        public BaseGradeBook(string name)
+        public BaseGradeBook(string name, bool isWeighted)
         {
             Name = name;
             Students = new List<Student>();
+            isWeighted = IsWeighted;
         }
 
         public void AddStudent(Student student)
