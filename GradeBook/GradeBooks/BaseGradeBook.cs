@@ -111,7 +111,7 @@ namespace GradeBook.GradeBooks
         }
 
         //start of the changes
-        public virtual int GetGPA(char letterGrade, StudentType studentType)
+        public virtual double GetGPA(char letterGrade, StudentType studentType)
         {
             int extrapoint = 0;
 
